@@ -1,0 +1,57 @@
+body {
+	font-size: 9pt;
+}
+
+.navbar { display: none; }
+
+.hero-unit {
+	padding: 0px;
+	margin-bottom: 0px;
+	background-color: white;
+	h1 {
+		font-size: 24pt;
+		small {
+			font-size: 12pt;
+	  }
+	}
+	img {
+		width: 24pt;
+		height: 24pt;
+	}
+}
+
+a {
+	color: black;
+}
+
+section {
+	padding: 0px;
+	margin: 0px;
+}
+
+.container-fluid {
+	padding: 0px;
+	margin: 0px;
+}
+
+.page-header h1 {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14pt;
+}
+
+section h3 {
+	font-size: 12pt;
+}
+
+p {
+	margin: {
+		top: 0.5em;
+		bottom: 0.5em;
+	}
+}
+
+footer {
+	display: none;
+}
+

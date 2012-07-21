@@ -1,12 +1,12 @@
 =content_for :title do
   Rich Daley
 .hero-unit
-  .container
+  .container-fluid
     %h1
-      =gravatar "rich@richd.me", 80
+      =gravatar "rich@richd.me", 80, :class => 'rounded'
       %span.nowrap Rich Daley
       %small.nowrap Software engineering manager
-  .container#addresses
+  .container-fluid#addresses
     .row-fluid
       .span8
         %i.icon-home
@@ -31,7 +31,8 @@
         =link_to "rich@richd.me", "mailto:rich@richd.me"
 
 - sections.each do |t|
-  .container{:id => t}
-    .page-header
-      %h1= section_header(t)
-    =render :partial => t
+  %section{:id => t}
+    .container-fluid
+      .page-header
+        %h1= section_header(t)
+      =render :partial => t

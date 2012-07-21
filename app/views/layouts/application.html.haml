@@ -9,7 +9,9 @@
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
+    = stylesheet_link_tag "bootstrap_and_overrides", :media => "all"
     = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "print", :media => "print"
     %link(href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
     %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
     %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
@@ -20,27 +22,23 @@
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
-        .container-fluid
+        .container
           %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
           %a.brand(href="#")
-            =gravatar "rich@richd.me", 24
             Rich Daley
           .container.nav-collapse
             %ul.nav
               - sections.each do |s|
                 %li= link_to s.capitalize, "##{s}"
 
-    .container-fluid
+    .container
 
-      .row-fluid
+      .row
         .span12
           = yield
+
+    %footer
     
-      %footer
-        %p &copy; Company 2012
     /
       Javascripts
       \==================================================

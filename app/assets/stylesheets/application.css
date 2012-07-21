@@ -1,18 +1,46 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+ body {
+ 	 font-family: Palatino;
+ 	 font-size: 14px;
+ }		
+ 
+ h1, h2, h3, .hero-unit, .navbar {
+ 	 font-family: Gill Sans, Verdana, sans-serif;
+ }	
+ 
+ section {
+ 	 padding-top:50px;
+   margin-top:-50px;
+ }
+  
+ section .row-fluid {
+ 	 margin-bottom: 10px;
+ }
+ 
+ section .row-fluid .span4 {
+   padding-top: 1em; 
+   padding-right: -2em;
+ }
+ 
+ section .row-fluid .span8 {
+ 	 padding-top: 1em;
+   padding-left: 2em; 
+ }
+ 
+ 
+ a.brand {color: white !important;}
+ 
  .nowrap {white-space: nowrap;}
+ 
+ img.rounded {
+ 	 -webkit-border-radius: 6px;
+ 	 -moz-border-radius: 6px;
+ 	 border-radius: 6px;
+ 	 -webkit-border-radius: 6px;
+ 	 -moz-border-radius: 6px;
+ 	 border-radius: 6px; 	 
+ }
  
  #addresses {margin-top: 1em; }
  #addresses strong {width: 40em;}
 
+ footer {height: 40em;}
