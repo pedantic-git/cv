@@ -25,24 +25,18 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") Cv
+          %a.brand(href="#")
+            =gravatar "rich@richd.me", 24
+            Rich Daley
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              - sections.each do |s|
+                %li= link_to s.capitalize, "##{s}"
 
     .container-fluid
 
       .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
-        .span9
+        .span12
           = yield
     
       %footer

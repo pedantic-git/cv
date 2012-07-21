@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+ .nowrap {white-space: nowrap;}
+ 
+ #addresses {margin-top: 1em; }
+ #addresses strong {width: 40em;}
+

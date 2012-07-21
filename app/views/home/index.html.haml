@@ -1,2 +1,37 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+=content_for :title do
+  Rich Daley
+.hero-unit
+  .container
+    %h1
+      =gravatar "rich@richd.me", 80
+      %span.nowrap Rich Daley
+      %small.nowrap Software engineering manager
+  .container#addresses
+    .row-fluid
+      .span8
+        %i.icon-home
+        %strong Address:
+        Available on request, Leeds LS1
+      .span4
+        %i.icon-bell
+        %strong Telephone:
+        %span.nowrap 07963 043979
+    .row-fluid
+      .span4
+        %i.icon-globe
+        %strong Web site:
+        =link_to "http://richd.me/cv", "http://richd.me/cv"
+      .span4
+        %i.icon-user
+        %strong LinkedIn:
+        =link_to "richdaley", "http://uk.linkedin.com/in/richdaley"
+      .span4
+        %i.icon-envelope
+        %strong Email address:
+        =link_to "rich@richd.me", "mailto:rich@richd.me"
+
+- sections.each do |t|
+  .container{:id => t}
+    .page-header
+      %h1= section_header(t)
+    =render :partial => t
